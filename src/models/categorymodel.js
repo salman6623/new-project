@@ -1,11 +1,11 @@
-const mongoose = require('mongoose');
+ const mongoose = require('mongoose');
 
 const addCategorySchema = new mongoose.Schema({
     namaCategory: {
         type: String,
         require: true
     },
-    deskripsi:{
+    deskripsi: {
         type:String,
         require: true    
     },
