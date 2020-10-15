@@ -8,7 +8,6 @@ const getData = async (id, model) => {
     const result = await model.findById(id).select('-password'); // 
     return result;
 }
-
 router.get('/news',async(req, res) => { 
     try {
         const result = await News.find({}); // disini await nya berfungsi untuk disuruh menunggu data seluruh news baru di tampilkan jika seluruh data news sudah muncul
@@ -21,7 +20,6 @@ router.get('/news',async(req, res) => {
             }
         }));
         res.send(promises);
-
     }catch(e) {
         res.send({message: e.message});
     }
